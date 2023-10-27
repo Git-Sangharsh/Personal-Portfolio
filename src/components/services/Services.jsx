@@ -105,6 +105,9 @@ const Services = () => {
             Numpy
             <img src="/numpy.png" />
             <br />
+            Pandas
+            <img src="/Pandas.png" />
+            <br />
             Scikit
             <img src="/scikit.png" />
             <br />
