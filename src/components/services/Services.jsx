@@ -20,20 +20,19 @@ const variants = {
 };
 
 const Services = () => {
+  const ref = useRef();
 
-    const ref = useRef()
-
-    const isInView = useInView(ref, {margin: '-100px'})
+  const isInView = useInView(ref, { margin: "-100px" });
 
   return (
     <motion.div
       className="services"
       variants={variants}
       initial="initial"
-    //   animate="animate"
-    // whileInView='animate'
-    ref = {ref}
-    animate = {isInView && 'animate'}
+      //   animate="animate"
+      // whileInView='animate'
+      ref={ref}
+      animate={isInView && "animate"}
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
@@ -46,12 +45,13 @@ const Services = () => {
         <div className="title">
           <img src="/people.webp" />
           <h1>
-            <motion.b whileHover={{color: 'orange'}}>Skills</motion.b> I Know
+            <motion.b whileHover={{ color: "orange" }}>Skills</motion.b> I Know
           </h1>
         </div>
         <div className="title">
           <h1>
-            That can enhance your<motion.b whileHover={{color: 'orange'}}> Business</motion.b>
+            That can enhance your
+            <motion.b whileHover={{ color: "orange" }}> Business</motion.b>
           </h1>
           <button>WHAT WE DO?</button>
         </div>
