@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-
+import './Style.css'
 const items = [
   {
     id: 1,
@@ -64,6 +64,12 @@ const Portfolio = () => {
     damping: 30,
   });
 
+  const scrollTo = (offset) => {
+    window.scrollBy({
+      top: offset,
+      behavior: "smooth"
+    })
+  }
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
@@ -71,7 +77,13 @@ const Portfolio = () => {
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
       {items.map((item) => (
-        <Single item={item} key={item.id} />
+        <div>
+          <Single item={item} key={item.id} />
+          {/* adding button for scroll up */}
+          <button className="scrollBtnUp" onClick={() => scrollTo(-300)}>Scroll Up</button>
+          {/* adding button for scroll down */}
+          <button className="scrollBtnDown" onClick={() => scrollTo(300)}>Scroll Down</button>
+        </div>
       ))}
     </div>
   );
