@@ -79,10 +79,6 @@ const Portfolio = () => {
       {items.map((item) => (
         <div>
           <Single item={item} key={item.id} />
-          {/* adding button for scroll up */}
-          <button className="scrollBtnUp" onClick={() => scrollTo(-300)}>Scroll Up</button>
-          {/* adding button for scroll down */}
-          <button className="scrollBtnDown" onClick={() => scrollTo(300)}>Scroll Down</button>
         </div>
       ))}
     </div>
